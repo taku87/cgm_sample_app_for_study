@@ -31,8 +31,19 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :index_size do
     process resize_and_pad: [1600, 900, '#f5ebdc', 'Center']
+    process :convert_to_webp
   end
 
+  def convert_to_webp
+    manipulate! { |img| img.format('webp') }
+  end
+
+  def filename
+    return unless original_filename.present?
+
+    base_name = File.basename(original_filename, '.*')
+    "#{base_name}.webp"
+  end
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_allowlist
