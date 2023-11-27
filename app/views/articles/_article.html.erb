@@ -15,8 +15,10 @@
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show", article, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to "Edit", edit_article_path(article), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
+    <div class="flex space-x-2">
+      <%= link_to "Show", article, class: "rounded-lg py-2 px-4 w-24 bg-gray-100 inline-block font-medium text-center" %>
+      <%= link_to "Edit", edit_article_path(article), class: "rounded-lg py-2 px-4 w-24 bg-gray-100 inline-block font-medium text-center" %>
+    </div>
+    <hr class="my-6">
   <% end %>
 </div>
