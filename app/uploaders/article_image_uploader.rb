@@ -29,7 +29,9 @@ class ArticleImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-
+  version :index_size do
+    process resize_and_pad: [1600, 900, '#f5ebdc', 'Center']
+  end
 
   # Add an allowlist of extensions which are allowed to be uploaded.
   # For images you might use something like this:
