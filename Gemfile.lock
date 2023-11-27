@@ -239,6 +239,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  mini_magick
   puma (~> 5.0)
   rails (~> 7.0.8)
   redis (~> 4.0)
