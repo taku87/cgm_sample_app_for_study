@@ -1,4 +1,4 @@
-<div class="mx-auto md:w-2/3 w-full flex">
+<div class="mx-auto md:w-2/3 w-full flex pb-8">
   <div class="mx-auto">
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
@@ -6,10 +6,10 @@
 
     <%= render @article %>
 
-    <%= link_to "Edit this article", edit_article_path(@article), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this article", article_path(@article), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <div class="flex space-x-4 px-4 mt-4">
+      <%= link_to "Edit", edit_article_path(@article), class: "rounded-lg py-3 px-5 w-24 bg-gray-100 inline-block font-medium text-center" %>
+      <%= button_to "Destroy", article_path(@article), method: :delete, class: "rounded-lg py-3 px-5 w-24 bg-gray-100 font-medium text-center" %>
+      <%= link_to "Back", articles_path, class: "rounded-lg py-3 px-5 w-24 bg-gray-100 inline-block font-medium text-center" %>
     </div>
-    <%= link_to "Back to articles", articles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
   </div>
 </div>
