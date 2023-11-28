@@ -52,7 +52,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # 画像アップロード用
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave'
+
+# 画像加工・合成用
+gem 'cloudinary'
 
 # 画像加工用
 gem 'mini_magick'
@@ -60,8 +63,9 @@ gem 'mini_magick'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "pry-rails"
-  gem "pry-byebug"
+  gem 'pry-rails'
+  gem 'pry-byebug'
+
 end
 
 group :development do
